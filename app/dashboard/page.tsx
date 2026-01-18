@@ -21,10 +21,14 @@ export default function StudentDashboard() {
     useEffect(() => {
         async function loadModules() {
             try {
+                console.log('🔍 Dashboard: Starting to fetch modules...');
+                console.log('🔍 Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL);
                 const data = await contentService.getModules();
-                setModules(data);
-            } catch (err) {
-                console.error('Error loading modules:', err);
+                console.log('✅ Fetch Success! Modules found:', data?.length);
+                setModules(data || []);
+            } catch (err: any) {
+                console.error('❌ Error loading modules:', err);
+                console.error('Error Details:', err.message || err);
             } finally {
                 setLoading(false);
             }
