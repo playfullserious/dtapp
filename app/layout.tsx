@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "XIME Learning Platform",
-  description: "Access curated learning content from XIME faculty",
+  title: "Digital Transformation Navigator",
+  description: "Advanced Learning Platform for Digital Transformation",
 };
 
 export default function RootLayout({

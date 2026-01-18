@@ -38,10 +38,10 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">X</span>
+                <span className="text-white font-bold text-xl">DT</span>
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                XIME Learning Platform
+                Digital Transformation Navigator
               </h1>
             </div>
             {session && (
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
 
           <h2 className="text-5xl font-extrabold text-gray-900 mb-4">
-            Welcome to XIME
+            Welcome to the Platform
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Access curated learning content from your faculty.
@@ -91,7 +91,7 @@ export default function Home() {
                 Sign in with Google
               </button>
               <p className="text-sm text-gray-500">
-                🔒 Restricted to @xime.org accounts only
+                🔒 Restricted to authorized institutional accounts only
               </p>
             </div>
           ) : (
@@ -146,7 +146,7 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Secure Access</h3>
-            <p className="text-gray-600">Protected content accessible only to XIME students</p>
+            <p className="text-gray-600">Protected content accessible only to authorized students</p>
           </div>
         </div>
       </main>
@@ -154,7 +154,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-white/60 backdrop-blur-sm mt-20 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-          <p>© 2026 XIME Learning Platform. All rights reserved.</p>
+          <p>© 2026 Digital Transformation Navigator. All rights reserved.</p>
         </div>
       </footer>
     </div>
