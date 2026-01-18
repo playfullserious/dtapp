@@ -46,13 +46,14 @@ export const authOptions: NextAuthOptions = {
                     .single();
 
                 if (existingUser) {
-                    // Update last login
+                    // Update last login and role (in case it changed in config)
                     await supabase
                         .from('users')
                         .update({
                             last_login: new Date().toISOString(),
                             name: user.name,
-                            avatar_url: user.image
+                            avatar_url: user.image,
+                            role: role // Add this line
                         })
                         .eq('email', email);
                 } else {

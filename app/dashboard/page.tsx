@@ -164,11 +164,18 @@ export default function StudentDashboard() {
                                                 {index + 1}
                                             </div>
                                             <div>
-                                                <h4 className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                                                    {module.title}
-                                                </h4>
-                                                <p className="text-gray-600 line-clamp-2 max-w-2xl text-sm leading-relaxed mt-1">
-                                                    {module.description}
+                                                <div className="flex items-center space-x-2 mb-1">
+                                                    {module.focus && (
+                                                        <span className="px-2 py-0.5 bg-indigo-100 text-indigo-700 text-[10px] font-bold rounded uppercase tracking-wider">
+                                                            {module.focus}
+                                                        </span>
+                                                    )}
+                                                    <h4 className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                                        {module.title}
+                                                    </h4>
+                                                </div>
+                                                <p className="text-gray-600 line-clamp-2 max-w-2xl text-sm leading-relaxed">
+                                                    {module.role_in_course || module.description}
                                                 </p>
                                             </div>
                                         </div>

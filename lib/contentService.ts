@@ -4,6 +4,8 @@ export interface Module {
     id?: string;
     title: string;
     description: string;
+    role_in_course?: string;
+    focus?: string;
     order_index?: number;
 }
 
