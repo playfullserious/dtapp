@@ -79,7 +79,7 @@ export default function Home() {
           {!session ? (
             <div className="space-y-4">
               <button
-                onClick={() => signIn('google')}
+                onClick={() => signIn('google', { prompt: 'select_account' })}
                 className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24">
