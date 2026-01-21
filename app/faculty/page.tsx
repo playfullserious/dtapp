@@ -50,7 +50,7 @@ export default function FacultyDashboard() {
                     <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-3">
                             <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">X</span>
+                                <span className="text-white font-bold text-xl">DT</span>
                             </div>
                             <h1 className="text-2xl font-bold text-gray-900">Faculty Dashboard</h1>
                         </div>
@@ -192,7 +192,7 @@ export default function FacultyDashboard() {
                                         <span className="w-8 h-8 bg-indigo-100 text-indigo-700 font-bold rounded flex items-center justify-center text-sm">{idx + 1}</span>
                                         <div>
                                             <h4 className="font-bold text-gray-900">{module.title}</h4>
-                                            <p className="text-xs text-gray-500">{module.description.substring(0, 100)}...</p>
+                                            <p className="text-xs text-gray-500">{module.description?.substring(0, 100) || module.role_in_course || 'No description available'}...</p>
                                         </div>
                                     </div>
                                     <Link href={`/learn/${module.id}`} className="text-indigo-600 hover:text-indigo-800 font-bold text-sm">Preview</Link>
