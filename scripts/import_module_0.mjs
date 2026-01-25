@@ -226,7 +226,7 @@ async function importModule0() {
     }
 
     // 3. Format Markdown Content
-    let markdown = `# ${moduleData.topic_title}\n\n## Introduction\n${moduleData.description}\n\n`;
+    let markdown = `## Introduction\n${moduleData.description}\n\n`;
 
     moduleData.timeline.forEach(stage => {
         markdown += `### ${stage.period}: ${stage.stage_title}\n`;

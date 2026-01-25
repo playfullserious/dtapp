@@ -101,8 +101,7 @@ async function importTopic21() {
     }
 
     // 4. Format Markdown
-    let markdown = `# ${topicData.topic_title}\n\n`;
-    markdown += `**Purpose:** ${topicData.purpose}\n\n`;
+    let markdown = `**Purpose:** ${topicData.purpose}\n\n`;
     markdown += `## Definition\n${topicData.definition}\n\n`;
 
     markdown += `## Qualification Criteria\n`;
