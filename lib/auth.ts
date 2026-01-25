@@ -31,14 +31,6 @@ export const authOptions: NextAuthOptions = {
             const emailDomain = email.split('@')[1].toLowerCase();
             const allowedDomains = allowedDomain.split(',').map(d => d.trim().toLowerCase());
 
-            console.log('--- Auth Debug ---');
-            console.log('Email:', email);
-            console.log('Detected Domain:', emailDomain);
-            console.log('Allowed Domains List:', allowedDomains);
-            console.log('Is Allowed:', allowedDomains.includes(emailDomain));
-            console.log('Raw Env Var:', process.env.ALLOWED_EMAIL_DOMAIN);
-            console.log('------------------');
-
             if (!allowedDomains.includes(emailDomain)) {
                 console.log(`Access denied: ${email} is not from an allowed domain (${allowedDomains.join(', ')})`);
                 return false;
